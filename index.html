@@ -28,8 +28,9 @@
 
     <!-- DASHBOARD -->
     <section id="dashboard" class="section active">
-      <h2>Dashboard Overview</h2>
-
+      <h2>Business Intelligence Dashboard</h2>
+    
+      <!-- KPIs -->
       <div class="stats">
         <div class="stat-card">
           <span>Total Orders</span>
@@ -40,11 +41,38 @@
           <strong id="statPaid">–</strong>
         </div>
         <div class="stat-card">
-          <span>Revenue (£)</span>
+          <span>Total Revenue (£)</span>
           <strong id="statRevenue">–</strong>
         </div>
       </div>
+    
+      <!-- CHART GRID -->
+      <div class="charts">
+        <div class="chart-card">
+          <h3>Sales Trend</h3>
+          <canvas id="salesTrendChart"></canvas>
+        </div>
+    
+        <div class="chart-card">
+          <h3>Top Selling Products</h3>
+          <canvas id="topProductsChart"></canvas>
+        </div>
+    
+        <div class="chart-card">
+          <h3>Order Status Distribution</h3>
+          <canvas id="orderStatusChart"></canvas>
+        </div>
+    
+        <div class="chart-card">
+          <h3>Revenue Breakdown</h3>
+          <canvas id="revenueBreakdownChart"></canvas>
+        </div>
+      </div>
     </section>
+    
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
 
     <!-- ORDERS -->
     <section id="orders" class="section">
