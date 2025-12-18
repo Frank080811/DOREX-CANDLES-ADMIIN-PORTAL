@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Luminous Candles | Admin Portal</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+<header class="admin-header">
+  <div class="logo">Luminous Candles</div>
+  <div class="admin-actions">
+    <span class="admin-name">Admin</span>
+  </div>
+</header>
+
+<div class="admin-container">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <button class="nav active" onclick="showSection('dashboard')">Dashboard</button>
+    <button class="nav" onclick="showSection('orders')">Orders</button>
+    <button class="nav" onclick="showSection('labels')">Shipping Labels</button>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="content">
+
+    <!-- DASHBOARD -->
+    <section id="dashboard" class="section active">
+      <h2>Dashboard Overview</h2>
+
+      <div class="stats">
+        <div class="stat-card">
+          <span>Total Orders</span>
+          <strong id="statOrders">–</strong>
+        </div>
+        <div class="stat-card">
+          <span>Paid Orders</span>
+          <strong id="statPaid">–</strong>
+        </div>
+        <div class="stat-card">
+          <span>Revenue (£)</span>
+          <strong id="statRevenue">–</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORDERS -->
+    <section id="orders" class="section">
+      <h2>Orders</h2>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Order ID</th>
+            <th>Customer</th>
+            <th>Status</th>
+            <th>Total</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="ordersTable"></tbody>
+      </table>
+    </section>
+
+    <!-- LABELS -->
+    <section id="labels" class="section">
+      <h2>Shipping Labels</h2>
+
+      <button class="primary-btn" onclick="printBatchLabels()">
+        Print Selected Labels
+      </button>
+    </section>
+
+  </main>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>
